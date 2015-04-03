@@ -26,7 +26,7 @@ function MaximumCrossingSubArray(array, low, middle, high) {
 		high: highIndex,
 		sum: maxLow + maxHigh
 	};
-}
+}	
 
 function MaximumSubArray(array, lowIndex, highIndex) {
 	if (lowIndex == highIndex) {
@@ -51,3 +51,24 @@ function MaximumSubArray(array, lowIndex, highIndex) {
 }
 
 console.log(MaximumSubArray(array, 0, array.length - 1));
+
+// Brute Force
+function MaximumSubSequence(array) {
+	var maxSum = 0, maxArray = null;
+	for (var i = 0; i < array.length; ++i) {
+		var sum = 0;
+		for (var j = i; j < array.length; ++j) {
+			sum += array[j];
+			if (maxSum < sum) {
+				maxSum = sum;
+				maxArray = array.slice(i, j + 1);
+			}
+		}
+	}
+	return {
+		maxSum: maxSum,
+		maxArray: maxArray
+	};
+}
+
+console.log(MaximumSubSequence(array));
