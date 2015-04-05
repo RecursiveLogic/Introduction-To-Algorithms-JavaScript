@@ -12,3 +12,15 @@ function SquareMatrixMultiply(a, b) {
     }
     return result;
 }
+
+// Matrix Generator 
+function MatrixGen(row, col, value) {
+    var array = [];
+    for (var i = 0; i < row; ++i) {
+        array[i] = [];
+        for (var j = 0; j < col; ++j) {
+            array[i][j] = value;
+        }
+    }
+    return array;
+}
