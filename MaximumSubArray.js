@@ -70,5 +70,3 @@ function MaximumSubSequence(array) {
         maxArray: maxArray
     };
 }
-
-console.log(MaximumSubSequence(array));
