@@ -24,21 +24,3 @@ function MatrixGen(row, col, value) {
     }
     return array;
 }
-
-// Recursive Square Matrix Mutliply 
-// Still needs to be fixed, I'll get to that later!
-function SquareMatrixMultiplyRecursive(a, b) {
-    var C = [[,],[,]];
-    if (a.length == 0) {
-        return C[0][0] = a[0][0] * b[0][0];
-    } else {
-        C[0][0] = SquareMatrixMultiplyRecursive(a[0][0], b[0][0]) 
-                + SquareMatrixMultiplyRecursive(a[0][1], b[1][0]);
-        C[0][1] = SquareMatrixMultiplyRecursive(a[0][0], b[0][1])
-                + SquareMatrixMultiplyRecursive(a[0][1], b[1][1]);
-        C[1][0] = SquareMatrixMultiplyRecursive(a[1][0], b[0][0])
-                + SquareMatrixMultiplyRecursive(a[1][1], b[1][0]);
-        C[1][1] = SquareMatrixMultiplyRecursive(a[1][0], b[0][1])
-                + SquareMatrixMultiplyRecursive(a[1][1], b[1][1]);
-    }
-}
