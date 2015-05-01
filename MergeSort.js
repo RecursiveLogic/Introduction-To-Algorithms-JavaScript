@@ -37,7 +37,7 @@ function MergeSort(array) {
     }
 }
 
-// Shorter
+// -----------
 
 function MergeSort(array) {
     if (array.length < 2) return array;
