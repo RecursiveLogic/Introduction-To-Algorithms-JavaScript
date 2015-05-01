@@ -24,3 +24,15 @@ function MatrixGen(row, col, value) {
     }
     return array;
 }
+
+// Random Value Matrix Generator
+function MatrixRandomGen(row, col) {
+    var array = [];
+    for (var i = 0; i < row; ++i) {
+        array[i] = [];
+        for (var j = 0; j < col; ++j) {
+            array[i][j] = Math.floor(Math.random() * 100);
+        }
+    }
+    return array;
+}
